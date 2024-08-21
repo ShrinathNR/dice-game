@@ -82,7 +82,7 @@ impl<'info> ResolveBet<'info> {
             .wrapping_add(upper)
             .wrapping_rem(100) as u8 + 1;
 
-        if self.bet.roll < roll {
+        if self.bet.roll > roll {
 
             // Payout minus house edge
             let payout = (self.bet.amount as u128)
